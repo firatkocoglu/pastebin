@@ -1,0 +1,19 @@
+{% extends 'base.html' %} {% block content %}
+<section>
+    <article>
+        {% if link %}
+        <h1>Your text is ready to share!</h1>
+        <p>Here is your link: {{ link }}</p>
+        <p>Your plain text: {{ text }}</p>
+        <p>Expires in: {{ expiry }} </p>
+        <form action="{% url 'deleteText' %}" method="post">
+            <input type="hidden" name='id' value="{{ id }}">
+            <button type="submit">Delete Text</button>
+        </form>
+        <a href="/">Return Home</a>
+        {% else %}
+        <h1>Given URL cannot be found :/</h1>
+        {% endif %}
+    </article>
+</section>
+{% endblock %}

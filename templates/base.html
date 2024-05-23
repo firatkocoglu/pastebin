@@ -1,3 +1,8 @@
+{% load django_browser_reload %}
+{% load static tailwind_tags %}
+{% load tz %}
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,10 +10,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pastebin</title>
+    {% tailwind_css %}
 </head>
 
 <body>
-    <main>
+    <main class="container h-screen">
         {% block content %} {% endblock %}
     </main>
 </body>
