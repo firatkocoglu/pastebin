@@ -23,7 +23,7 @@ def postText(request):
             form_data = form.cleaned_data
             # PARSE FORM INPUTS
             text = form_data["text"]
-            # THIS FORM DATA GIVES US HOW MANY DAYS TEXT SHOULD BE VALID. THIS DATA CAN ALSO BE NULL.
+            # THIS FORM DATA GIVES US HOW MANY DAYS THE TEXT SHOULD BE VALID. THIS DATA CAN ALSO BE NULL.
             expire_days = form_data["expiry"]
             # WE CALCULATE THE EXPIRATION DATE WITH GIVEN 'EXPIRE DAYS'. IF EXPIRE DAYS ARE NOT GIVEN THEN EXPIRY IS NONE (DOES NOT EXPIRE)
             expiry = (

@@ -10,3 +10,5 @@ class PlainTextForm(forms.Form):
     def __init__(self, *args, **kwargs):
         super(PlainTextForm, self).__init__(*args, **kwargs)
         self.fields["text"].widget.attrs["placeholder"] = "Type your text here"
+        self.fields["text"].widget.attrs["class"] = "text"
+        self.fields["expiry"].widget.attrs["class"] = "expiry"
